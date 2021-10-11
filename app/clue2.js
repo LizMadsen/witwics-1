@@ -5,7 +5,7 @@
 // Given two numbers, write a function that will return  the larger number
 
 function largerNum(num1, num2) {
-  // TODO YOUR CODE HERE
+  return Math.max(num1, num2)
 }
 
 
@@ -20,7 +20,25 @@ function largerNum(num1, num2) {
 // output: "F"
 
 function crimeGrader(successful, total) {
-  // TODO YOUR CODE HERE
+  let grade = (successful / total) * 100
+  console.log(grade)
+
+
+  if (grade >= 90) {
+    return "A"
+  }
+  else if (grade >= 80 && grade <= 89) {
+    return "B"
+  }
+  else if (grade >= 70 && grade <= 79) {
+    return "C"
+  }
+  else if (grade >= 60 && grade <= 69) {
+    return "D"
+  }
+  else {
+    return "F"
+  }
 }
 
 
@@ -32,7 +50,15 @@ function crimeGrader(successful, total) {
 //   night is between 10pm and 4am (22 -24 and 1 - 4)
 //   Make sure your ranges are inclusive
 function timeOfDay(hour) {
-  // TODO YOUR CODE HERE
+  if (5 - 11) {
+    return "morning"
+  }
+  else if (12 - 17) {
+    return "afternoon"
+  }
+  else if (18 - 21) {
+    return "evening"
+  }
 }
 
 // Our surveillance team finds the closer we get to catching the associate the hotter the person gets, we can use this to narrow down the person
