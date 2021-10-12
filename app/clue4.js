@@ -11,7 +11,60 @@
 // output: 7
 
 function daysPosition(day, offset) {
-  // TODO YOUR CODE HERE
+  switch (day) {
+    case 'sunday':
+      if (offset) {
+        return 7
+      }
+      else {
+        return 1
+      }
+      break;
+    case 'monday':
+      if (offset) {
+        return 1
+      }
+      else {
+        return 2
+      }
+    case 'tuesday':
+      if (offset) {
+        return 2
+      }
+      else {
+        return 3
+      }
+    case 'wednesday':
+      if (offset) {
+        return 3
+      }
+      else {
+        return 4
+      }
+    case 'thursday':
+      if (offset) {
+        return 4
+      }
+      else {
+        return 5
+      }
+    case 'friday':
+      if (offset) {
+        return 5
+      }
+      else {
+        return 6
+      }
+    case 'saturday':
+      if (offset) {
+        return 6
+      }
+      else {
+        return 7
+      }
+    default:
+      return 'That\'s not a day of the week'
+  }
 }
 
 
@@ -32,7 +85,23 @@ function daysPosition(day, offset) {
  */
 
 function golfScore(score, par) {
-  // TODO YOUR CODE HERE
+  let golfScore = score - par
+  switch (golfScore) {
+    case -3:
+      return "ace"
+    case -2:
+      return "eagle"
+    case -1:
+      return "birdie"
+    case 0:
+      return "par"
+    case 1:
+      return "bogie"
+    case 2:
+      return "double bogie"
+    default:
+      return "ouch"
+  }
 }
 
 
@@ -58,5 +127,51 @@ function golfScore(score, par) {
 let count = 0
 
 function cardCounter(card) {
-  // TODO YOUR CODE HERE
+  switch (card) {
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+      {
+        count += 1
+        let concat = count
+        if (count > 0) {
+          concat += " bet"
+        }
+        else {
+          concat += " hold"
+        }
+        return concat
+      }
+    case '7':
+    case '8':
+    case '9':
+      {
+        let concat = count
+        if (count > 0) {
+          concat += " bet"
+        }
+        else {
+          concat += " hold"
+        }
+        return concat
+      }
+    case '10':
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+      {
+        count -= 1
+        let concat = count
+        if (count > 0) {
+          concat += " bet"
+        }
+        else {
+          concat += " hold"
+        }
+        return concat
+      }
+  }
 }
