@@ -50,15 +50,21 @@ function crimeGrader(successful, total) {
 //   night is between 10pm and 4am (22 -24 and 1 - 4)
 //   Make sure your ranges are inclusive
 function timeOfDay(hour) {
-  if (5 - 11) {
+  let timeOfDay = (hour)
+  if (timeOfDay >= 5 && timeOfDay <= 11) {
     return "morning"
   }
-  else if (12 - 17) {
+  else if (timeOfDay >= 12 && timeOfDay <= 17) {
     return "afternoon"
   }
-  else if (18 - 21) {
+  else if (timeOfDay >= 18 && timeOfDay <= 21) {
     return "evening"
   }
+  else if (timeOfDay >= 22 && timeOfDay <= 24) {
+    return "night"
+  }
+  else if (timeOfDay >= 1 && timeOfDay <= 4)
+    return "night"
 }
 
 // Our surveillance team finds the closer we get to catching the associate the hotter the person gets, we can use this to narrow down the person
