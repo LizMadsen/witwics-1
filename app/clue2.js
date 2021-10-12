@@ -71,7 +71,16 @@ function timeOfDay(hour) {
 
 // Write a function that will take in a number and return 'suspicious' if it indicates the person is over 98.6° and if the person is at or above 103° 'very suspicious', if it is under return 'not suspicious', (hint: try this with string concatenation)
 function isSuspicious(temp) {
-  // TODO YOUR CODE HERE
+  let isSuspicious = (temp)
+  if (isSuspicious >= 103 && isSuspicious <= 190) {
+    return "Very Suspicious"
+  }
+  else if (isSuspicious >= 98.7 && isSuspicious <= 102) {
+    return "Suspicious"
+  }
+  else if (isSuspicious <= 98.6) {
+    return "Not Suspicious"
+  }
 }
 
 // We think we might have found the associate, and have added a tracker to their car, to find where the associate is hiding we need to know when their car is stopped
@@ -87,7 +96,14 @@ let exampleCar = {
 }
 
 function isStopped(car) {
-  // TODO YOUR CODE HERE  
+  // if (car.moving) {
+  //   return false
+  // }
+  // else {
+  //   return true
+  // }
+
+  return !car.moving
 }
 
 // We have found everything we need to capture the associate, to make sure they don't elude us we want to make sure we only capture them when they are at home and their asleep.
@@ -101,5 +117,5 @@ let suspect = {
 }
 
 function attemptCapture(suspect) {
-  // TODO YOUR CODE HERE
+  return suspect.atHome && suspect.asleep
 }
